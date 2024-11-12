@@ -3,7 +3,7 @@ import React from 'react';
 const CommentsPage = () => {
     return (
         <div>
-            salam
+            salamn
         </div>
     );
 };
