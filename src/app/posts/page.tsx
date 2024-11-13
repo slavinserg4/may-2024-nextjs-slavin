@@ -1,11 +1,16 @@
 import React from 'react';
+import {apiService} from "@/app/services/api.services";
+import PostComponent from "@/app/components/PostComponent";
 
-const UsersPage = () => {
+
+
+const PostsPage = async () => {
+    let posts = await apiService.postService.getAll('posts')
     return (
         <div>
-            posts
+            {<PostComponent posts={posts}/>}
         </div>
     );
 };
 
-export default UsersPage;
+export default PostsPage;

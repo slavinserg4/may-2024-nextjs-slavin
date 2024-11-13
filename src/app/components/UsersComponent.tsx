@@ -3,7 +3,7 @@ import Link from "next/link";
 type Props = {
     users: { id: number, name: string } []
 }
-const Users:FC<Props> = ({users}) => {
+const UsersComponent:FC<Props> = ({users}) => {
     return (
         <div>
             {
@@ -15,4 +15,4 @@ const Users:FC<Props> = ({users}) => {
     );
 };
 
-export default Users;
+export default UsersComponent;

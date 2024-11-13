@@ -1,13 +1,13 @@
 import React from 'react';
-import Users from "@/app/components/Users";
+import UsersComponent from "@/app/components/UsersComponent";
+import {apiService} from "@/app/services/api.services";
 
-const PostsPage = () => {
-    const users = await fetch('https://jsonplaceholder.typicode.com/users')
-        .then(value => value.json());
+const PostsPage = async () => {
+    const users = await apiService.userService.getAll('users')
 
     return (
         <div>
-            {<Users users={users}/>}
+            {<UsersComponent users={users}/>}
         </div>
     );
 };

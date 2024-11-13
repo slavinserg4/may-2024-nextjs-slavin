@@ -1,9 +1,12 @@
 import React from 'react';
+import {apiService} from "@/app/services/api.services";
+import CommentComponent from "@/app/components/CommentComponent";
 
-const CommentsPage = () => {
+const CommentsPage = async () => {
+    let comments = await apiService.commentService.getAll('comments')
     return (
         <div>
-            salamn
+            {<CommentComponent comments={comments}/>}
         </div>
     );
 };
